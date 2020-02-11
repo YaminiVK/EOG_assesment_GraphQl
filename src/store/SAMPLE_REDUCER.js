@@ -1,6 +1,6 @@
-import { Map, fromJS } from 'immutable';
+import { Map, fromJS } from "immutable";
 
-import * as actions from './actions';
+import * as actions from "./actions";
 
 const sampleReducer = (state, action) => {
   const { status = 0, data = {} } = action;
@@ -11,7 +11,7 @@ const sampleReducer = (state, action) => {
       fetching: false,
       error: false,
       status,
-      data: Map(data),
+      data: Map(data)
     });
   }
 
@@ -22,7 +22,7 @@ const sampleReducer = (state, action) => {
         fetching: true,
         error: false,
         status,
-        data,
+        data
       });
 
     case [actions.SAMPLE_DATA_RECEIVED]:
@@ -31,7 +31,7 @@ const sampleReducer = (state, action) => {
         fetching: false,
         error: false,
         status,
-        data,
+        data
       });
 
     case [actions.SAMPLE_API_ERROR]:
@@ -40,7 +40,7 @@ const sampleReducer = (state, action) => {
         fetching: false,
         error: true,
         status,
-        data,
+        data
       });
 
     default:
